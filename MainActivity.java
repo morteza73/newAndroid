@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
@@ -17,7 +18,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//introduce all View to code
+		
+		/*ImageButton imbtn0=(ImageButton) findViewById(R.id.imageButton0);*/
 		ImageButton imbtn1=(ImageButton) findViewById(R.id.imageButton1);
 		ImageButton imbtn2=(ImageButton) findViewById(R.id.imageButton2);
 		ImageButton imbtn3=(ImageButton) findViewById(R.id.imageButton3);
@@ -49,7 +51,14 @@ public class MainActivity extends Activity {
 		ImageButton imbtn29=(ImageButton) findViewById(R.id.imageButton29);
 		ImageButton imbtn30=(ImageButton) findViewById(R.id.imageButton30);
 		ImageButton imbtn31=(ImageButton) findViewById(R.id.imageButton31);
-		//sensetive to click all View
+		
+		///////
+		/*imbtn0.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+			
+			}});*/
+		//
+		
 		imbtn1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				other_activity("hello");
@@ -210,7 +219,6 @@ public class MainActivity extends Activity {
 	}
 
 	private void other_activity(String a) {
-		//this part pruduce another activity
 		progressBar = ProgressDialog.show(MainActivity.this, "", "");
 		progressBar.setContentView(R.layout.activity2);
 		progressBar.setCancelable(true);
